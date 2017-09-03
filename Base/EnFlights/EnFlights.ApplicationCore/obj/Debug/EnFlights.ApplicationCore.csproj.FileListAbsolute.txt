@@ -1,0 +1,5 @@
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.ApplicationCore\bin\Debug\EnFlights.ApplicationCore.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.ApplicationCore\bin\Debug\EnFlights.ApplicationCore.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.ApplicationCore\obj\Debug\EnFlights.ApplicationCore.csprojResolveAssemblyReference.cache
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.ApplicationCore\obj\Debug\EnFlights.ApplicationCore.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.ApplicationCore\obj\Debug\EnFlights.ApplicationCore.pdb
