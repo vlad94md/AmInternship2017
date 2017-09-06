@@ -6,6 +6,6 @@ namespace EnFlights.ApplicationCore.Interfaces
     {
         bool IsUsernameAndPasswordCorrect(string username, string password);
         bool IsUsernameUnique(string username);
-        void RegisterUser(User user);
+        User RegisterUser(User user);
     }
 }

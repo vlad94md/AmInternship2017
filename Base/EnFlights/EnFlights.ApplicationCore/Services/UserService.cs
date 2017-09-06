@@ -1,12 +1,13 @@
 ﻿using EnFlights.ApplicationCore.Entities;
 using EnFlights.ApplicationCore.Interfaces;
-using System;
+using System.IO;
+using System.Linq;
 
 namespace EnFlights.ApplicationCore.Services
 {
     public class UserService : IUserService
     {
-        private IRepository<User> _userRepository;
+        private readonly IRepository<User> _userRepository;
 
         public UserService(IRepository<User> userRepository)
         {
@@ -15,17 +16,23 @@ namespace EnFlights.ApplicationCore.Services
 
         public bool IsUsernameAndPasswordCorrect(string username, string password)
         {
-            throw new NotImplementedException();
+            var user = _userRepository.GetAll().FirstOrDefault(u => u.Email == username && u.Password == password);
+
+            return user != null;
         }
 
         public bool IsUsernameUnique(string username)
         {
-            throw new NotImplementedException();
+            var user = _userRepository.GetAll().FirstOrDefault(u => u.Email == username);
+
+            return user == null;
         }
 
-        public void RegisterUser(User user)
+        public User RegisterUser(User user)
         {
-            throw new NotImplementedException();
+            if(user == null) throw new InvalidDataException("User data is invalid");
+
+            return _userRepository.Add(user);
         }
     }
 }
