@@ -1,4 +1,5 @@
 ﻿using EnFlights.ApplicationCore.Entities;
+using EnFlights.ApplicationCore.Helpers;
 using EnFlights.ApplicationCore.Interfaces;
 using System.IO;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace EnFlights.ApplicationCore.Services
 
         public bool IsUsernameAndPasswordCorrect(string username, string password)
         {
-            var user = _userRepository.GetAll().FirstOrDefault(u => u.Email == username && u.Password == password);
+            var user = _userRepository.GetAll().FirstOrDefault(u => u.Email == username && u.Password == password.GetSHA256Hash());
 
             return user != null;
         }
@@ -31,6 +32,9 @@ namespace EnFlights.ApplicationCore.Services
         public User RegisterUser(User user)
         {
             if(user == null) throw new InvalidDataException("User data is invalid");
+
+            var hashedPassword = user.Password.GetSHA256Hash();
+            user.Password = hashedPassword;
 
             return _userRepository.Add(user);
         }

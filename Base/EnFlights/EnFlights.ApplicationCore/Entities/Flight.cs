@@ -1,4 +1,5 @@
 ﻿using EnFlights.ApplicationCore.Entities.Base;
+using EnFlights.ApplicationCore.Entities.Constants;
 using System;
 using System.Collections.Generic;
 
@@ -16,10 +17,9 @@ namespace EnFlights.ApplicationCore.Entities
         public decimal TicketPrice { get; set; }
         public int TotalSeats { get; set; }
         public int BookedSeats { get; set; }
-
+        public FlightStatusEnum Status { get; set; }
         public City CityFrom { get; set; }
         public City CityTo { get; set; }
         public ICollection<User> Passengers { get; set; }
-
     }
 }

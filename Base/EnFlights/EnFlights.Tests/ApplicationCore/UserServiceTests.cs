@@ -1,4 +1,5 @@
 ﻿using EnFlights.ApplicationCore.Entities;
+using EnFlights.ApplicationCore.Helpers;
 using EnFlights.ApplicationCore.Interfaces;
 using EnFlights.ApplicationCore.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -22,28 +23,35 @@ namespace EnFlights.Tests.ApplicationCore
         {
             _mockRepository = new Mock<IRepository<User>>();
 
-            var users = new List<User>()
-            {
-                new User()
+            var hashedPassword = "12345".GetSHA256Hash();
+
+                var users = new List<User>()
                 {
-                    Email = "test@mail.com",
-                    Password = "12345"
-                },
-                new User()
-                {
-                    Email = "test2@mail.com",
-                    Password = "12345"
-                }
-            };
+                    new User()
+                    {
+                        Email = "test@mail.com",
+                        Password = hashedPassword
+                    },
+                    new User()
+                    {
+                        Email = "test2@mail.com",
+                        Password = hashedPassword
+                    }
+                };
 
             testUser = new User()
             {
                 Email = "test@mail.com",
-                Password = "12345"
+                Password = hashedPassword
             };
 
             _mockRepository.Setup(r => r.GetAll()).Returns(users);
-            _mockRepository.Setup(r => r.Add(testUser)).Returns(new User() {Email = testUser.Email, Password = testUser.Password, Id = Guid.NewGuid() });
+            _mockRepository.Setup(r => r.Add(testUser)).Returns(new User()
+            {
+                Email = testUser.Email,
+                Password = testUser.Password.GetSHA256Hash(),
+                Id = Guid.NewGuid()
+            });
 
             _userService = new UserService(_mockRepository.Object);
         }
