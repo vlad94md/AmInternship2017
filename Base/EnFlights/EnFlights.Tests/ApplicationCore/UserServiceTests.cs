@@ -13,7 +13,7 @@ namespace EnFlights.Tests.ApplicationCore
     [TestClass]
     public class UserServiceTests
     {
-        private UserService _userService;
+        private IUserService _userService;
         private Mock<IRepository<User>> _mockRepository;
 
         private User testUser;
@@ -25,19 +25,11 @@ namespace EnFlights.Tests.ApplicationCore
 
             var hashedPassword = "12345".GetSHA256Hash();
 
-                var users = new List<User>()
-                {
-                    new User()
-                    {
-                        Email = "test@mail.com",
-                        Password = hashedPassword
-                    },
-                    new User()
-                    {
-                        Email = "test2@mail.com",
-                        Password = hashedPassword
-                    }
-                };
+            var users = new List<User>()
+            {
+                new User(){ Email = "test@mail.com", Password = hashedPassword },
+                new User(){ Email = "test2@mail.com", Password = hashedPassword }
+            };
 
             testUser = new User()
             {
@@ -63,7 +55,7 @@ namespace EnFlights.Tests.ApplicationCore
             var username = "test@mail.com";
 
             //Act
-            var actualResult =_userService.IsUsernameUnique(username);
+            var actualResult = _userService.IsUsernameUnique(username);
 
             //Assert
             Assert.AreEqual(false, actualResult);

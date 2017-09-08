@@ -96,6 +96,8 @@
   <ItemGroup>
     <Compile Include="ApplicationCore\PopularServiceTests.cs" />
     <Compile Include="ApplicationCore\ScheduleServiceTests.cs" />
+    <Compile Include="ApplicationCore\TicketOrderServiceTests.cs" />
+    <Compile Include="ApplicationCore\TicketSearchTests.cs" />
     <Compile Include="ApplicationCore\UserServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

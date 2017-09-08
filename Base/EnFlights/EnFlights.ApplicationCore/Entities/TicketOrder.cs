@@ -14,5 +14,6 @@ namespace EnFlights.ApplicationCore.Entities
         public int NumberOfSeats { get; set; }
         public BaggageTypeEnum BaggageType { get; set; }
         public decimal TotalPrice { get; set; }
+        public DateTime OrderDate { get; set; }
     }
 }

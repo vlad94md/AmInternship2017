@@ -10,7 +10,7 @@ namespace EnFlights.Tests.ApplicationCore
     [TestClass]
     public class PopularServiceTests
     {
-        private PopularService _popularService;
+        private IPopularService _popularService;
         private Mock<IRepository<TicketOrder>> _mockOrderRepository;
 
         private List<City> cities;

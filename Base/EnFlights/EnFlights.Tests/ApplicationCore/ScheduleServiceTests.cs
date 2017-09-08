@@ -12,7 +12,7 @@ namespace EnFlights.Tests.ApplicationCore
     [TestClass]
     public class ScheduleServiceTests
     {
-        private ScheduleService _scheduleService;
+        private IScheduleService _scheduleService;
         private Mock<IRepository<Flight>> _mockRepository;
 
         private DateTime pastDate = new DateTime(2017, 1, 1);
@@ -32,18 +32,9 @@ namespace EnFlights.Tests.ApplicationCore
             //Arrange
             var flights = new List<Flight>
             {
-                new Flight()
-                {
-                    Name = "FA536", ArrivalDate = today
-                },
-                new Flight()
-                {
-                    Name = "FA678", ArrivalDate = pastDate
-                },
-                new Flight()
-                {
-                    Name = "FJ190", ArrivalDate = futureDate
-                }
+                new Flight(){ Name = "FA536", ArrivalDate = today },
+                new Flight(){ Name = "FA678", ArrivalDate = pastDate },
+                new Flight(){ Name = "FJ190", ArrivalDate = futureDate }
             };
 
             _mockRepository.Setup(x => x.GetAll()).Returns(flights);

@@ -50,12 +50,15 @@
     <Compile Include="Entities\Constants\TitleEnum.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserFlightLink.cs" />
+    <Compile Include="Exceptions\OrderFailException.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IScheduleService.cs" />
     <Compile Include="Interfaces\IPopularService.cs" />
     <Compile Include="Interfaces\ITicketOrderService.cs" />
     <Compile Include="Interfaces\ITicketSearchService.cs" />
+    <Compile Include="Services\TicketSearchService.cs" />
+    <Compile Include="Services\TicketOrderService.cs" />
     <Compile Include="Models\TicketSearchModel.cs" />
     <Compile Include="Services\PopularService.cs" />
     <Compile Include="Services\ScheduleService.cs" />
