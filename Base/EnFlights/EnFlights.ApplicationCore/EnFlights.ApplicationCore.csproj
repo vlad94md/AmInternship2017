@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Base\IBaseEntity.cs" />
+    <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\BillingDetails.cs" />
     <Compile Include="Entities\Constants\BaggageTypeEnum.cs" />
     <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Flight.cs" />
@@ -49,7 +50,6 @@
     <Compile Include="Entities\TicketOrder.cs" />
     <Compile Include="Entities\Constants\TitleEnum.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Entities\UserFlightLink.cs" />
     <Compile Include="Exceptions\OrderFailException.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
@@ -57,6 +57,7 @@
     <Compile Include="Interfaces\IPopularService.cs" />
     <Compile Include="Interfaces\ITicketOrderService.cs" />
     <Compile Include="Interfaces\ITicketSearchService.cs" />
+    <Compile Include="Models\TicketSearchResult.cs" />
     <Compile Include="Services\TicketSearchService.cs" />
     <Compile Include="Services\TicketOrderService.cs" />
     <Compile Include="Models\TicketSearchModel.cs" />

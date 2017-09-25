@@ -5,9 +5,8 @@ using System.Collections.Generic;
 
 namespace EnFlights.ApplicationCore.Entities
 {
-    public class User : IBaseEntity
+    public class User : BaseEntity
     {
-        public Guid Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public TitleEnum Title { get; set; }
@@ -20,6 +19,7 @@ namespace EnFlights.ApplicationCore.Entities
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
 
-        public ICollection<Flight> BookedFlights { get; set; }
+        public virtual ICollection<Flight> BookedFlights { get; set; }
+        public virtual ICollection<TicketOrder> TicketOrders { get; set; }
     }
 }

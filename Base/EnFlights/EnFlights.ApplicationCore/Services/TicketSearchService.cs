@@ -2,7 +2,6 @@
 using EnFlights.ApplicationCore.Interfaces;
 using EnFlights.ApplicationCore.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace EnFlights.ApplicationCore.Services
@@ -16,15 +15,30 @@ namespace EnFlights.ApplicationCore.Services
             _flightRepository = flightRepository;
         }
 
-        public List<Flight> FindFlights(TicketSearchModel searchCriteria)
+        public TicketSearchResult FindFlights(TicketSearchModel searchCriteria)
         {
-            var flights = _flightRepository.GetAll().
-                Where(x => CompareDates(x.ArrivalDate, searchCriteria.ArrivalDate) &&
-                           CompareDates(x.DepartureDate, searchCriteria.DepartureDate) &&
-                           x.CityToId == searchCriteria.CityToId &&
-                           x.CityFromId == searchCriteria.CityFromId).ToList();
+            var result = new TicketSearchResult();
 
-            return flights;
+            result.ToFlights = _flightRepository.GetAll().
+                Where(x => CompareDates(x.DepartureDate, searchCriteria.DepartureDate) &&
+                           x.CityToId == searchCriteria.CityToId &&
+                           x.CityFromId == searchCriteria.CityFromId &&
+                           x.BookedSeats + searchCriteria.NumberOfPassengers <= x.TotalSeats)
+                           .OrderByDescending(x => x.DepartureDate)
+                           .ToList();
+
+            if (searchCriteria.IsRoundWay)
+            {
+                result.ReturnFlights = _flightRepository.GetAll().
+                Where(x => CompareDates(x.DepartureDate, searchCriteria.BackDate.Value) &&
+                           x.CityToId == searchCriteria.CityFromId &&
+                           x.CityFromId == searchCriteria.CityToId &&
+                           x.BookedSeats + searchCriteria.NumberOfPassengers <= x.TotalSeats)
+                           .OrderByDescending(x => x.DepartureDate)
+                           .ToList();
+            }
+
+            return result;
         }
 
         private bool CompareDates(DateTime x, DateTime y)

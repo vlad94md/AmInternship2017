@@ -1,0 +1,15 @@
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.IntegrationsTests.dll.config
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.IntegrationsTests.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.IntegrationsTests.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.ApplicationCore.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.Infrastructure.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EntityFramework.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.ApplicationCore.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EnFlights.Infrastructure.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EntityFramework.xml
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\obj\Debug\EnFlights.IntegrationsTests.csprojResolveAssemblyReference.cache
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\obj\Debug\EnFlights.IntegrationsTests.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\obj\Debug\EnFlights.IntegrationsTests.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.IntegrationsTests\bin\Debug\EntityFramework.SqlServer.xml

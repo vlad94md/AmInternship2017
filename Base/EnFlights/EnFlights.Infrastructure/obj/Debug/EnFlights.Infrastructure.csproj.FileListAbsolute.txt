@@ -1,0 +1,15 @@
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EnFlights.Infrastructure.dll.config
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EnFlights.Infrastructure.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EnFlights.Infrastructure.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EnFlights.ApplicationCore.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EntityFramework.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EnFlights.ApplicationCore.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EntityFramework.xml
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.csprojResolveAssemblyReference.cache
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.dll
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.pdb
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.Migrations.Initial.resources
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.csproj.GenerateResource.Cache
+D:\GIT\AmInternship2017\Base\EnFlights\EnFlights.Infrastructure\obj\Debug\EnFlights.Infrastructure.Migrations.AddBillingDetailsChange.resources

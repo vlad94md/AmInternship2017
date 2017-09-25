@@ -1,0 +1,17 @@
+﻿#ticket-search-form {
+  width: 550px;
+}
+#ticket-search-form .header {
+  height: 80px;
+}
+#ticket-search-form .footer a {
+  margin-bottom: 20px;
+}
+#ticket-search-form .togglebutton {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+#ticket-search-form .togglebutton label {
+  color: #555555;
+  font-weight: 500;
+}

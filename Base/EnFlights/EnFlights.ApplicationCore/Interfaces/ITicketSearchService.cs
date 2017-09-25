@@ -1,11 +1,10 @@
-﻿using EnFlights.ApplicationCore.Entities;
-using EnFlights.ApplicationCore.Models;
-using System.Collections.Generic;
+﻿using EnFlights.ApplicationCore.Models;
+using EnFlights.ApplicationCore.Services;
 
 namespace EnFlights.ApplicationCore.Interfaces
 {
     public interface ITicketSearchService
     {
-        List<Flight> FindFlights(TicketSearchModel searchCriteria);
+        TicketSearchResult FindFlights(TicketSearchModel searchCriteria);
     }
 }

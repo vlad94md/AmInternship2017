@@ -40,6 +40,11 @@ namespace EnFlights.ApplicationCore.Services
                 throw new OrderFailException("Not enough places available to book this flight");
             }
 
+            if (owner.PassportExpirationDate < DateTime.Now)
+            {
+                throw new OrderFailException("Passport of a passanger is expired. Check expiration date");
+            }
+
             decimal calculatedPrice = CalculatePrice(flight, numberOfSeats, baggageType);
 
             var order = new TicketOrder()

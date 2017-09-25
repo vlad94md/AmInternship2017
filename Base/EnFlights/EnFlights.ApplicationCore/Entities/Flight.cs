@@ -5,9 +5,8 @@ using System.Collections.Generic;
 
 namespace EnFlights.ApplicationCore.Entities
 {
-    public class Flight : IBaseEntity
+    public class Flight : BaseEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public Guid CityFromId { get; set; }
         public DateTime DepartureDate { get; set; }
@@ -18,8 +17,10 @@ namespace EnFlights.ApplicationCore.Entities
         public int TotalSeats { get; set; }
         public int BookedSeats { get; set; }
         public FlightStatusEnum Status { get; set; }
-        public City CityFrom { get; set; }
-        public City CityTo { get; set; }
-        public ICollection<User> Passengers { get; set; }
+
+        public virtual City CityFrom { get; set; }
+        public virtual City CityTo { get; set; }
+        public virtual ICollection<User> Passengers { get; set; }
+        public virtual ICollection<TicketOrder> TicketOrders { get; set; }
     }
-}
+} 
